@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "up": "node_modules/.bin/knex --esm --knexfile config/knexfile.js migrate:latest",
+    "down": "node_modules/.bin/knex --esm --knexfile config/knexfile.js migrate:down",
+    "reset": "node_modules/.bin/knex  --esm --knexfile config/knexfile.js migrate:rollback --all"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.21.15",
+    "pg": "^8.5.1"
+  }
+}
